@@ -22,10 +22,6 @@ html, body {
 body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-}
-
-.container {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -53,13 +49,17 @@ body {
     justify-content: space-between;
     gap: 82px;
     padding: 5% 14%;
-    flex: 1; /* Esta é a propriedade que permite que o conteúdo se expanda e empurre o rodapé */
+    flex: 1;
 }
 
 .apresentacao img {
     max-width: 500px;
     height: auto;
     border-radius: 50px;
+}
+
+.apresentacao section {
+    max-width: 50%;
 }
 
 .apresentacao__conteudo {
@@ -119,11 +119,6 @@ body {
     font-weight: 600;
 }
 
-.apresentacao__links__navegacao img {
-    width: 32px;
-    height: 32px;
-}
-
 .apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
 }
@@ -140,6 +135,7 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+    width: 100%;
 }
 
 .sobre__texto {
@@ -153,14 +149,14 @@ body {
 }
 
 /* ---------------------------------- */
-/* MEDIA QUERY CORRIGIDA E OTIMIZADA  */
+/* MEDIA QUERY OTIMIZADA  */
 /* ---------------------------------- */
 
 @media (max-width: 1200px) {
     body {
         overflow-x: hidden;
     }
-    
+
     .cabecalho {
         padding: 5%;
     }
@@ -170,13 +166,14 @@ body {
         justify-content: center;
         gap: 20px;
     }
-    
+
     .apresentacao {
         flex-direction: column-reverse;
         padding: 5%;
         gap: 40px;
+        flex: 1;
     }
-    
+
     .apresentacao__conteudo {
         width: 100%;
         padding: 0 2%;
@@ -192,7 +189,7 @@ body {
         line-height: 1.5;
         text-align: left;
     }
-    
+
     .apresentacao__imagem {
         width: 80%;
         max-width: 300px;
