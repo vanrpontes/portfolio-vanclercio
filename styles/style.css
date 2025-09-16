@@ -22,7 +22,6 @@ html, body {
 body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-    /* Apenas o background e a cor, sem flexbox aqui */
 }
 
 .container {
@@ -54,7 +53,7 @@ body {
     justify-content: space-between;
     gap: 82px;
     padding: 5% 14%;
-    flex: 1; /* Esta é a propriedade que faz o conteúdo se esticar */
+    flex: 1;
 }
 
 .apresentacao img {
