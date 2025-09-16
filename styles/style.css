@@ -153,19 +153,54 @@ body {
 
 @media (max-width: 1200px) {
     .cabecalho {
-        padding: 6%;
+        padding: 5%;
     }
 
     .cabecalho__menu {
-        justify-content: center;
+        flex-direction: column; /* Coloca os links um abaixo do outro */
+        gap: 20px; /* Diminui a distância entre os links */
+        justify-content: center; /* Centraliza os links horizontalmente */
+        align-items: center; /* Centraliza o texto dos links */
     }
 
     .apresentacao {
         flex-direction: column-reverse;
-        padding: 5%;
+        padding: 5%; /* Ajusta o padding para telas pequenas */
+        gap: 40px; /* Reduz a distância entre a imagem e o texto */
     }
     
     .apresentacao__conteudo {
-        width: 100vw;
+        width: 100%; /* Ocupa 100% da largura, mas com o padding do .apresentacao */
+        padding: 0 5%; /* Adiciona um padding interno para não grudar nas bordas */
+        gap: 20px; /* Diminui a distância entre os elementos de texto */
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem; /* Diminui o tamanho do título */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 1rem; /* Diminui o tamanho da fonte do texto */
+    }
+    
+    .apresentacao__imagem {
+        width: 80%; /* A imagem agora ocupa 80% da largura do contêiner */
+        max-width: 300px; /* Mas não ultrapassa 300px em telas maiores */
+    }
+
+    .apresentacao__links {
+        flex-direction: column; /* Deixa os botões um abaixo do outro */
+        width: 100%; /* Ocupa toda a largura do contêiner */
+        gap: 20px;
+    }
+
+    .apresentacao__links__navegacao {
+        width: 100%; /* Botões ocupam 100% do contêiner de links */
+        box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    }
+
+    .sobre__texto {
+        font-size: 1rem; /* Diminui a fonte da página "Sobre mim" */
     }
 }
