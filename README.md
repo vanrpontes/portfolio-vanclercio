@@ -14,6 +14,6 @@
 
 ### Vanclercio Rocha Pontes  
 
-### Linkedin: https://www.linkedin.com/school/aluracursos/
+### Linkedin: https://www.linkedin.com/in/vanrpontes
 
 ```
