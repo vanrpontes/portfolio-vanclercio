@@ -15,9 +15,19 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cabecalho {
@@ -40,9 +50,10 @@ body {
 .apresentacao {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Melhor que center */
+    justify-content: space-between;
     gap: 82px;
     padding: 5% 14%;
+    flex: 1; /* Esta é a propriedade que permite que o conteúdo se expanda e empurre o rodapé */
 }
 
 .apresentacao img {
@@ -50,9 +61,6 @@ body {
     height: auto;
     border-radius: 50px;
 }
-
-/* Remove a regra que limita a seção de texto, pois ela será controlada por outras classes */
-/* .apresentacao section { max-width: 50%; } */
 
 .apresentacao__conteudo {
     width: 50%;
@@ -132,7 +140,6 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
-    width: 100%;
 }
 
 .sobre__texto {
@@ -150,7 +157,6 @@ body {
 /* ---------------------------------- */
 
 @media (max-width: 1200px) {
-    /* Oculta o scroll horizontal, caso ele apareça */
     body {
         overflow-x: hidden;
     }
@@ -173,7 +179,7 @@ body {
     
     .apresentacao__conteudo {
         width: 100%;
-        padding: 0 2%; /* Um padding ainda menor para usar mais a tela */
+        padding: 0 2%;
     }
 
     .apresentacao__conteudo__titulo {
@@ -183,8 +189,8 @@ body {
 
     .apresentacao__conteudo__texto {
         font-size: 1rem;
-        line-height: 1.5; /* Melhora a leitura em mobile */
-        text-align: left; /* Tira o justify que espreme o texto */
+        line-height: 1.5;
+        text-align: left;
     }
     
     .apresentacao__imagem {
@@ -198,14 +204,14 @@ body {
     }
 
     .apresentacao__links__navegacao {
-        width: 90%; /* Usa 90% da largura para ter uma margem */
+        width: 90%;
     }
 
     .sobre__texto {
         font-size: 1rem;
-        max-width: 95%; /* Limita a largura para não ser muito grande, mas usando mais a tela */
-        text-align: left; /* Tira o justify */
-        margin: 0 auto; /* Centraliza o texto */
+        max-width: 95%;
+        text-align: left;
+        margin: 0 auto;
     }
 
     .rodape {
