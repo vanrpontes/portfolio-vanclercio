@@ -147,51 +147,46 @@ body {
     max-width: 800px;
 }
 
-/* ---------------------------------- */
-/* MEDIA QUERY OTIMIZADA E PROFISSIONAL */
-/* ---------------------------------- */
+---
+## Media Query Final e Otimizada
 
 @media (max-width: 1200px) {
     .apresentacao {
+        /* Define a direção da coluna e o espaçamento lateral mínimo */
         flex-direction: column-reverse;
         padding: 50px 20px;
         align-items: center;
-        justify-content: center;
-        width: auto;
-    }
-    
-    .apresentacao__conteudo {
-        /* A regra crucial que alinha o texto com a imagem */
-        width: auto;
-        max-width: 300px;
-        text-align: center;
-        padding: 0;
+        gap: 40px;
     }
 
-    .apresentacao__imagem {
-        /* A imagem também tem um max-width fixo para alinhamento */
+    .apresentacao__conteudo {
+        /* Ocupa a largura total disponível dentro do contêiner */
         width: 100%;
-        max-width: 300px;
-        height: auto;
+        padding: 0;
+        text-align: center;
     }
 
     .apresentacao__conteudo__titulo {
         font-size: 1.5rem;
-        padding: 0 10px;
     }
-    
+
     .apresentacao__conteudo__texto {
         font-size: 1rem;
         line-height: 1.5;
         text-align: justify;
-        padding: 0 10px;
     }
-    
+
+    .apresentacao__imagem {
+        width: 100%; /* Faz a imagem ocupar a largura do contêiner pai */
+        max-width: 300px;
+        height: auto;
+    }
+
     .apresentacao__links {
         width: 100%;
         gap: 20px;
     }
-    
+
     .apresentacao__links__navegacao {
         width: 90%;
     }
@@ -210,12 +205,13 @@ body {
     }
     
     .sobre__texto {
+        /* Garante que o texto ocupe a maior largura possível na página "Sobre mim" */
+        width: 100%;
         font-size: 1rem;
-        line-height: 1.5;
         text-align: justify;
-        padding: 0 10px;
+        line-height: 1.5;
+        padding: 0;
         margin: 0 auto;
-        max-width: 300px;
     }
 
     .rodape {
