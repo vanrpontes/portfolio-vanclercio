@@ -167,80 +167,34 @@ body {
 /* MEDIA QUERY FINAL */
 /* ---------------------------------- */
 
-@media (max-width: 1200px) {
-    body {
-        overflow-x: hidden;
-    }
+@media (max-width: 768px) {
+  .apresentacao {
+    display: flex;
+    flex-direction: column-reverse; /* foto primeiro, texto depois */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
 
-    .cabecalho {
-        padding: 5% 5% 0 5%;
-    }
+  .apresentacao__conteudo,
+  .apresentacao__imagem {
+    width: 100% !important;   /* ignora o 50% do desktop */
+    max-width: 600px;         /* limite de leitura confortável */
+  }
 
-    .cabecalho__menu {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-    }
+  .apresentacao__conteudo {
+    text-align: center;       /* títulos centralizados */
+  }
 
-    .apresentacao {
-        /* foto em cima e conteúdo embaixo (mobile) */
-        flex-direction: column-reverse;
-        padding: 40px 20px;
-        align-items: center;
-        gap: 40px;
-    }
+  .apresentacao__conteudo p {
+    text-align: justify;      /* parágrafos justificados */
+  }
 
-    /* garantir que foto e conteúdo ocupem a mesma largura visual */
-    .apresentacao__conteudo,
-    .apresentacao__imagem {
-        width: 100%;
-        max-width: 480px; /* limite igual para os dois */
-        margin: 0 auto;
-    }
-
-    .apresentacao__conteudo {
-        text-align: left; /* leitura mais natural no celular */
-        padding: 0 16px;
-        width: 100%;
-    }
-
-    .apresentacao__conteudo__titulo {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .apresentacao__conteudo__texto {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        text-align: justify;
-    }
-
-    .apresentacao__imagem {
-        max-width: 360px; /* foto encolhe um pouco para não dominar */
-        border-radius: 24px;
-    }
-
-    .apresentacao__links {
-        width: 100%;
-        gap: 20px;
-    }
-
-    .apresentacao__links__navegacao {
-        width: 90%;
-    }
-
-    .rodape {
-        font-size: 1rem;
-        padding: 20px;
-    }
-
-    .sobre__texto {
-        width: 100%;
-        font-size: 1rem;
-        text-align: justify;
-        line-height: 1.5;
-        padding: 0 20px;
-        margin: 0 auto;
-    }
+  .apresentacao__imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;      /* opcional */
+  }
 }
+
