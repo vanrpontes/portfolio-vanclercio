@@ -175,22 +175,22 @@ body {
         gap: 40px;
     }
 
-    .apresentacao__conteudo {
-        /* Ocupa a largura total disponível dentro do contêiner */
+    /* .apresentacao__conteudo {
+        /* Ocupa a largura total disponível dentro do contêiner 
         width: 100%;
         padding: 0;
         text-align: center;
-    }
+    } */
 
-    .apresentacao__conteudo__titulo {
+    /* .apresentacao__conteudo__titulo {
         font-size: 1.5rem;
-    }
+    } */
 
-    .apresentacao__conteudo__texto {
+    /* .apresentacao__conteudo__texto {
         font-size: 1rem;
         line-height: 1.5;
         text-align: justify;
-    }
+    } */
 
     .apresentacao__imagem {
         width: 100%;
@@ -212,12 +212,12 @@ body {
         padding: 20px;
     }
 
-    .sobre__texto {
+    /* .sobre__texto {
         width: 100%;
         font-size: 1rem;
         text-align: justify;
         line-height: 1.5;
         padding: 0 20px;
         margin: 0 auto;
-    }
+    } */
 }
