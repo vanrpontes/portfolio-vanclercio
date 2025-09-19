@@ -18,7 +18,6 @@
 body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-    /* Adiciona a altura mínima para garantir que o fundo ocupe toda a tela */
     min-height: 100vh;
 }
 
@@ -149,74 +148,78 @@ body {
 }
 
 /* ---------------------------------- */
-/* MEDIA QUERY OTIMIZADA  */
+/* MEDIA QUERY OTIMIZADA E PROFISSIONAL */
 /* ---------------------------------- */
 
 @media (max-width: 1200px) {
-    body {
-        /* Garante que não haja rolagem horizontal */
-        overflow-x: hidden;
-    }
-
-    .cabecalho {
-        /* Padding horizontal para o menu */
-        padding: 5%;
-    }
-
-    .cabecalho__menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
     .apresentacao {
-        /* Ajusta a direção para mobile e um padding lateral mínimo */
         flex-direction: column-reverse;
         padding: 50px 20px;
-        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+    
+    .apresentacao__conteudo {
+        /* A regra crucial que alinha o texto com a imagem */
+        width: auto;
+        max-width: 300px;
+        text-align: center;
+        padding: 0;
     }
 
-    .apresentacao__conteudo {
-        /* Faz o conteúdo ocupar toda a largura disponível */
+    .apresentacao__imagem {
+        /* A imagem também tem um max-width fixo para alinhamento */
         width: 100%;
-        padding: 0;
+        max-width: 300px;
+        height: auto;
     }
 
     .apresentacao__conteudo__titulo {
         font-size: 1.5rem;
-        text-align: center;
         padding: 0 10px;
     }
-
+    
     .apresentacao__conteudo__texto {
         font-size: 1rem;
         line-height: 1.5;
-        text-align: left;
+        text-align: justify;
         padding: 0 10px;
     }
-
-    .apresentacao__imagem {
-        width: 80%;
-        max-width: 300px;
-    }
-
+    
     .apresentacao__links {
         width: 100%;
         gap: 20px;
     }
-
+    
     .apresentacao__links__navegacao {
         width: 90%;
     }
 
-    .rodape {
-        font-size: 1rem;
+    .cabecalho {
+        padding: 5% 5% 0% 5%;
+        justify-content: center;
+        align-items: center;
     }
 
+    .cabecalho__menu {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+    
     .sobre__texto {
         font-size: 1rem;
-        max-width: 100%;
-        text-align: left;
         line-height: 1.5;
+        text-align: justify;
+        padding: 0 10px;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .rodape {
+        font-size: 1rem;
+        padding: 20px;
     }
 }
