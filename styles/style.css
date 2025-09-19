@@ -148,7 +148,7 @@ body {
 }
 
 /* ---------------------------------- */
-/* MEDIA QUERY OTIMIZADA */
+/* MEDIA QUERY FINAL */
 /* ---------------------------------- */
 
 @media (max-width: 1200px) {
@@ -168,6 +168,7 @@ body {
     }
 
     .apresentacao {
+        /* AQUI ESTÁ A MUDANÇA: SÓ PADDING LATERAL */
         flex-direction: column-reverse;
         padding: 50px 20px;
         align-items: center;
@@ -175,7 +176,7 @@ body {
     }
 
     .apresentacao__conteudo {
-        /* AQUI FOI O AJUSTE. Ele agora usa a largura máxima do contêiner */
+        /* Ocupa a largura total disponível */
         width: 100%;
         padding: 0;
         text-align: center;
@@ -192,8 +193,8 @@ body {
     }
 
     .apresentacao__imagem {
+        /* A foto agora ocupará a largura total, sem max-width */
         width: 100%;
-        max-width: 300px;
         height: auto;
     }
 
