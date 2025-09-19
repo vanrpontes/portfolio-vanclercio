@@ -168,33 +168,40 @@ body {
 /* ---------------------------------- */
 
 @media (max-width: 768px) {
-  .apresentacao {
-    display: flex;
-    flex-direction: column-reverse; /* foto primeiro, texto depois */
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .apresentacao__conteudo,
-  .apresentacao__imagem {
-    width: 100% !important;   /* ignora o 50% do desktop */
-    max-width: 600px;         /* limite de leitura confortável */
-  }
-
   .apresentacao__conteudo {
-    text-align: center;       /* títulos centralizados */
+    width: 100%;
+    max-width: 600px;       /* garante boa largura de leitura */
+    text-align: left;       /* texto alinhado à esquerda, mais profissional */
+    margin: 0 auto;         /* centraliza o bloco na tela */
   }
 
   .apresentacao__conteudo p {
-    text-align: justify;      /* parágrafos justificados */
+    line-height: 1.6;       /* melhora o respiro entre linhas */
+    text-align: justify;    /* dá aspecto mais formal */
   }
 
-  .apresentacao__imagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;      /* opcional */
+  .apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .apresentacao__links__navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;      /* evita texto/ícone escapando da borda */
+    font-size: 1rem;         /* tamanho fixo, não cresce nem diminui */
+    max-width: 250px;        /* mantém botão firme */
+    white-space: nowrap;     /* não quebra o nome nem o ícone */
+  }
+
+  .apresentacao__links__navegacao img {
+    width: 20px;
+    height: 20px;
   }
 }
+
 
